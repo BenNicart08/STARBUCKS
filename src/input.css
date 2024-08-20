@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins overflow-x-hidden;
+  }
+  .container {
+    @apply max-w-[1600px] w-full px-4 mx-auto;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-base;
+  }
+  p {
+    @apply text-sm;
+  }
+  .header__nav {
+    @apply bg-white flex flex-col gap-5 fixed w-[25rem] h-full top-[6.2rem] text-center p-10 font-semibold duration-700 right-[-100%] lg:flex-row lg:h-auto lg:w-auto lg:static lg:bg-transparent;
+  }
+  .header__nav.open {
+    @apply right-0 z-50 overflow-y-hidden;
+  }
+  .header__nav li a {
+    @apply text-black/80 hover:text-primary;
+  }
+  .toggle__menu {
+    @apply flex flex-col gap-1 z-50 lg:hidden;
+  }
+  .toggle__menu span {
+    @apply content-["1"] bg-black w-5 h-0.5 rounded-lg ease-in-out duration-700;
+  }
+  .toggle__menu.open span {
+    @apply content-["1"] bg-black w-5 h-0.5 rounded-lg ease-in-out duration-700;
+  }
+  .toggle__menu.open span:first-child {
+    transform: translate(0, 4.5px) rotate(225deg);
+    transition: all 0.5s ease;
+  }
+  .toggle__menu.open span:nth-child(2) {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .toggle__menu.open span:last-child {
+    transform: translate(0, -8px) rotate(-225deg);
+    transition: all 0.5s ease;
+  }
+  .backdrop {
+    @apply hidden;
+  }
+  .backdrop.open {
+    @apply block fixed top-[6.2rem] left-0 h-screen w-full backdrop-blur-sm duration-700 overflow-y-hidden;
+  }
+}
+
+
+@layer components {
+  .btn {
+    @apply py-1 px-4 bg-transparent border-transparent rounded-3xl shadow-[0_8px_24px_-15px_rgba(149,157,165,0.5)];
+  }
+  .btn.bg-primaryy {
+    @apply bg-primary border border-white text-white  hover:bg-black/15;
+  }
+  .btn.bg-blackk {
+    @apply bg-black border border-black text-white  hover:bg-black/15;
+  }
+  .btn.bg-scdryy {
+    @apply bg-secondary border border-secondary text-black hover:bg-transparent;
+  }
+  .btn.bg-clr {
+    @apply bg-transparent border border-black text-black hover:bg-black/15;
+  }
+}
