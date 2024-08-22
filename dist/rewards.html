@@ -13,14 +13,22 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header py-5 shadow-[0_8px_24px_-15px_rgba(149,157,165,0.2)]">
+    <header
+      class="header py-5 shadow-[0_8px_24px_-15px_rgba(149,157,165,0.2)] lg:h-[6rem]"
+    >
       <div class="container">
         <div
-          class="header__wrapper flex justify-between items-center mt-[0.4rem]"
+          class="header__wrapper flex items-center justify-between mt-[0.4rem] lg:h-[3rem]"
         >
-          <div class="header__left flex">
-            <img class="w-16 pl-3" src="../img/starbucks-logo-png.png" alt="" />
-            <ul class="header__nav text-left">
+          <img
+            class="w-16 pl-3 lg:w-[52px] lg:h-[52px] lg:pl-0"
+            src="../img/starbucks-logo-png.png"
+            alt=""
+          />
+          <div class="header__nav flex">
+            <ul
+              class="header__navi text-left flex flex-col gap-5 lg:flex-row lg:items-center lg:relative lg:right-[47rem]"
+            >
               <li>
                 <a href=""><h3>Menu</h3></a>
               </li>
@@ -29,19 +37,25 @@
               </li>
               <li>
                 <a href=""
-                  ><h3 class="border-b border-gray-300 pb-10">Gift Cards</h3></a
+                  ><h3
+                    class="border-b border-gray-300 pb-10 lg:border-none lg:pb-0"
+                  >
+                    Gift Cards
+                  </h3></a
                 >
               </li>
-              <div class="header__right flex flex-col-reverse gap-5 pt-4">
-                <a href=""
-                  ><i class="fa-solid fa-location-dot"></i> Find a store</a
-                >
-                <div class="header__button flex gap-5">
-                  <a href="" class="btn bg-clr">Sign in</a>
-                  <a href="" class="btn bg-blackk">Join Now</a>
-                </div>
-              </div>
             </ul>
+            <div
+              class="header__right flex flex-col-reverse gap-5 pt-4 lg:flex-row lg:items-center"
+            >
+              <a href=""
+                ><i class="fa-solid fa-location-dot"></i> Find a store</a
+              >
+              <div class="header__button flex gap-5">
+                <a href="" class="btn bg-clr">Sign in</a>
+                <a href="" class="btn bg-blackk">Join Now</a>
+              </div>
+            </div>
           </div>
           <div class="toggle__menu">
             <span class=""></span>
@@ -56,7 +70,7 @@
     <section class="stickyMsg p-3 bg-tertiary sticky top-[-0.5px] z-30">
       <div class="container">
         <div
-          class="stickyMsg__wrapper flex justify-between text-white items-center"
+          class="stickyMsg__wrapper flex justify-between text-white items-center lg:pl-14"
         >
           <h4 class="font-semibold">STARBUCKS® REWARDS</h4>
           <a href="" class="btn bg-clr2 lg:hidden"><p>Join in the app</p></a>
@@ -64,34 +78,48 @@
       </div>
     </section>
     <!-- BANNER -->
-    <section class="reBanner bg-bgRewards bg-cover bg-no-repeat h-[42rem]">
+    <section
+      class="reBanner bg-bgRewards bg-cover bg-no-repeat h-[42rem] lg:bg-bgRewardslg lg:h-[45rem] bg-dgreen"
+    >
       <div class="container">
         <div
-          class="reBanner__wrapper flex flex-col gap-5 items-center pt-7 text-center"
+          class="reBanner__wrapper flex flex-col gap-5 items-center pt-7 text-center lg:text-justify lg:items-start lg:ml-14"
         >
-          <div class="reBanner__text pb-3">
-            <h2 class="font-semibold mb-3">
+          <div class="reBanner__text pb-3 lg:mt-[15rem]">
+            <h2 class="font-semibold mb-3 lg:text-4xl">
               FREE COFFEE <br />
               IS A TAP AWAY
             </h2>
-            <p>Join now to start earning Rewards.</p>
+            <p class="lg:text-lg">Join now to start earning Rewards.</p>
           </div>
           <div class="reBanner__join flex flex-col gap-5">
-            <a href="" class="btn bg-primaryy">Join in the app</a>
-            <a href="" class="underline">Or join online</a>
+            <a href="" class="btn bg-primaryy lg:hidden">Join in the app</a>
+            <a href="" class="btn bg-primaryy hidden lg:block">Join now</a>
+            <a href="" class="underline lg:hidden">Or join online</a>
           </div>
+          <p class="hidden lg:block lg:text-lg">
+            Or
+            <a href="" class="underline hover:no-underline">join in the app</a>
+            for the best experience
+          </p>
         </div>
       </div>
     </section>
     <!-- INSTRUCTIONS -->
-    <section class="instructions pb-10">
+    <section class="instructions pb-10 lg:py-[5rem]">
       <div class="container">
-        <div class="instructions__title py-10 text-center">
-          <h3 class="font-semibold pb-3">Getting started is easy</h3>
-          <small>Earn Stars and get rewarded in a few easy steps.</small>
+        <div class="instructions__title py-10 text-center lg:pb-[3rem]">
+          <h3 class="font-semibold pb-3 lg:text-3xl lg:pb-8">
+            Getting started is easy
+          </h3>
+          <small class="lg:text-base"
+            >Earn Stars and get rewarded in a few easy steps.</small
+          >
         </div>
-        <div class="instructions__wrapper grid grid-cols-1 gap-8 ml-4">
-          <div class="instructions__steps">
+        <div
+          class="instructions__wrapper grid grid-cols-1 gap-8 ml-4 lg:grid-cols-3 lg:gap-2"
+        >
+          <div class="instructions__steps lg:hidden">
             <img src="../img/getting-started-1@2x.webp" alt="" />
             <div class="instructions__details">
               <h4>Download the Starbucks® app</h4>
@@ -99,6 +127,21 @@
                 <a href="">Join in the app</a> to get access to the full range
                 of Starbucks® Rewards benefits. You can also
                 <a href="">join online</a>.
+              </p>
+            </div>
+          </div>
+          <div class="instructions__steps hidden lg:block">
+            <img
+              class="mx-auto mb-4"
+              src="../img/getting-started-1@2x.webp"
+              alt=""
+            />
+            <div class="instructions__details">
+              <h4>Create an account</h4>
+              <p>
+                To get started,<a href="">join now.</a> You can also
+                <a href="">join in the app</a>
+                to get access to the full range of Starbucks® Rewards benefits.
               </p>
             </div>
           </div>
@@ -130,16 +173,18 @@
     <!-- FAVORITES -->
     <section class="favorite py-10">
       <div class="section wrapper">
-        <div class="favorites__top bg-lgreen pt-10">
-          <h3 class="font-semibold text-center mb-5">
+        <div
+          class="favorites__top bg-lgreen pt-10 shadow-[0_8px_24px_-15px_rgba(149,157,165,1)"
+        >
+          <h3 class="font-semibold text-center mb-10 lg:text-3xl">
             Get your favorites for free
           </h3>
-          <div class="favorites__tabs flex justify-center px-[5rem]">
+          <div class="favorites__tabs tabs-1-slideline">
             <a id="tabs-1" class="active">25<i class="fa-solid fa-star"></i></a>
-            <a id="tabs-2">100<i class="fa-solid fa-star"></i></a>
-            <a id="tabs-3">200<i class="fa-solid fa-star"></i></a>
-            <a id="tabs-4">300<i class="fa-solid fa-star"></i></a>
-            <a id="tabs-5">400<i class="fa-solid fa-star"></i></a>
+            <a id="tabs-2" class="">100<i class="fa-solid fa-star"></i></a>
+            <a id="tabs-3" class="">200<i class="fa-solid fa-star"></i></a>
+            <a id="tabs-4" class="">300<i class="fa-solid fa-star"></i></a>
+            <a id="tabs-5" class="">400<i class="fa-solid fa-star"></i></a>
           </div>
         </div>
         <div class="favorites__content bg-dgreen">
@@ -157,7 +202,7 @@
           </div>
           <div class="favorites__details" id="tabs-2-content">
             <div class="favorites__cards">
-              <img src="../img/100.png" alt="" />
+              <img src="../img/100.webp" alt="" />
               <div class="favorites__text">
                 <h4>
                   Brewed hot or iced coffee or tea, bakery item, packaged snack
@@ -213,25 +258,26 @@
       </div>
     </section>
     <!-- EXTRAS -->
-    <section class="extras">
+    <section class="extras py-14">
       <div class="container">
         <div class="extras__title text-center mb-10">
-          <h3 class="font-semibold mb-3">Endless Extras</h3>
-          <p>
-            Joining Starbucks® Rewards means unlocking access to <br />benefits
-            like quick and easy ordering, tasty Rewards and—<br />yes, free
-            coffee.
+          <h3 class="font-semibold mb-3 lg:text-2xl">Endless Extras</h3>
+          <p class="">
+            Joining Starbucks® Rewards means unlocking access to benefits like
+            quick and easy ordering,<br />
+            tasty Rewards and—yes, free coffee.
           </p>
         </div>
-        <div class="extras__wrapper flex flex-col">
+        <div
+          class="extras__wrapper flex flex-col lg:flex-row lg:max-w-full lg:mx-auto lg:justify-center gap-[5rem]"
+        >
           <div class="extras__cards">
             <img src="../img/1-fun-freebies-removebg-preview.png" alt="" />
             <div class="extras__details">
               <h4>Fun Freebies</h4>
               <p>
                 Not only can you earn free coffee, look forward to a birthday
-                treat plus coffee <br />
-                and tea refills.
+                treat plus coffee and tea refills.
               </p>
               <a href="">Learn more</a>
             </div>
@@ -271,10 +317,12 @@
     <section class="cashCard bg-gray">
       <div class="container">
         <div class="cashCard__title py-14 text-center">
-          <h3 class="font-semibold mb-5">Cash or card, you earn Stars</h3>
-          <p>
-            No matter how you pay, you can earn Stars with your <br />
-            morning coffee. Those Stars add up to (really delicious) Rewards.
+          <h3 class="font-semibold mb-5 lg:text-2xl">
+            Cash or card, you earn Stars
+          </h3>
+          <p class="lg:w-[40rem] lg:mx-auto">
+            No matter how you pay, you can earn Stars with your morning coffee.
+            Those Stars add up to (really delicious) Rewards.
           </p>
         </div>
         <div class="cashCard__wrapper">
@@ -333,17 +381,23 @@
       </div>
     </section>
     <!-- REWARDS -->
-    <section class="rewards bg-dgreen pt-7 pb-5">
+    <section
+      class="rewards pt-7 pb-5 lg:border-image-borderImg lg:border-slice-[20] lg:border-slice-no-fill lg:border-image-width-10 object-cover bg-dgreen"
+    >
       <div class="container">
-        <div class="rewards__title text-center pb-12">
-          <h3 class="font-semibold mb-5">Keep the Rewards Coming</h3>
-          <p>
-            The Rewards don't stop at your morning coffee. Join <br />Starbucks®
+        <div class="rewards__title text-center pb-12 lg:mt-24">
+          <h3 class="font-semibold mb-5 lg:text-3xl">
+            Keep the Rewards Coming
+          </h3>
+          <p class="lg:text-sm">
+            The Rewards don't stop at your morning coffee. Join Starbucks®
             Rewards and unlock perks from our partners, all while earning more
             Stars.
           </p>
         </div>
-        <div class="rewards__wrapper flex flex-col justify-center">
+        <div
+          class="rewards__wrapper flex flex-col justify-center lg:flex-row lg:gap-x-24"
+        >
           <div class="rewards__cards">
             <img src="../img/delta-skymiles.png" alt="" />
             <p>
@@ -375,20 +429,22 @@
             </p>
           </div>
         </div>
-        <div class="rewards__join">
+        <div class="rewards__join pb-12">
           <a href="" class="btn bg-primaryy">Join Starbucks® Rewards</a>
         </div>
       </div>
     </section>
     <!-- QUESTIONS -->
-    <section class="questions py-16">
+    <section class="questions py-28">
       <div class="container">
-        <div class="questions__wrapper">
-          <h3 class="font-semibold mb-3">Questions?</h3>
+        <div class="questions__wrapper lg:max-w-[42rem] lg:ml-[15rem]">
+          <h3 class="font-semibold mb-3 lg:text-3xl">Questions?</h3>
           <p>
             We want to help in any way we can. You can ask your barista anytime
             or we've answered the most commonly asked terms
-            <a href="" class="underline text-primary">right over here </a>
+            <a href="" class="underline text-primary hover:no-underline"
+              >right over here
+            </a>
             <i
               class="fa-solid fa-arrow-up-right-from-square text-primary cursor-pointer"
             ></i>
@@ -450,7 +506,7 @@
             International, Inc. and its affiliates. Used under license from
             Marriott International, Inc . <a href="">↩</a>
           </small>
-          <div class="restrictions__heads--wrap">
+          <div class="restrictions__heads--wrap lg:grid lg:grid-cols-2 gap-8">
             <div class="restrictions__heads">
               <p>EARNING STARS</p>
               <small
@@ -520,39 +576,45 @@
       </div>
     </section>
     <!-- FOOTER -->
-    <footer class="footer pt-10 pb-16">
+    <footer
+      class="footer mt-16 pb-16 shadow-[-8px_-12px_20px_-20px_rgba(0,0,0,0.4)]"
+    >
       <div class="container">
         <div class="footer__wrapper">
-          <div class="footer__content text-justify">
+          <div
+            class="footer__content text-justify shadow-[0.1px_24px_-15px_rgba(149,157,165,0.5)] lg:flex lg:max-w-[70rem] lg:mb-10 lg:pt-10 pt-10"
+          >
             <div class="footer__item">
               <h4>About Us <i class="fa-solid fa-chevron-up"></i></h4>
               <ul>
-                <li>Our Company</li>
-                <li>Our Coffee</li>
-                <li>Stories and News</li>
-                <li>Starbucks Archive</li>
-                <li>Investor Relations</li>
-                <li>Customer Service</li>
-                <li>Contact Us</li>
+                <li><a href="">Our Company</a></li>
+                <li><a href="">Our Coffee</a></li>
+                <li><a href="">Stories and News</a></li>
+                <li><a href="">Starbucks Archive</a></li>
+                <li><a href="">Investor Relations</a></li>
+                <li><a href="">Customer Service</a></li>
+                <li><a href="">Contact Us</a></li>
               </ul>
             </div>
             <div class="footer__item">
               <h4>Careers<i class="fa-solid fa-chevron-up"></i></h4>
               <ul>
-                <li>Culture and Values</li>
-                <li>Inclusion, Diversity, and Equity</li>
-                <li>College Achievement Plan</li>
-                <li>Alumni Community</li>
-                <li>U.S. Careers</li>
-                <li>International Careers</li>
+                <li><a href="">Culture and Values</a></li>
+                <li><a href="">Inclusion, Diversity, and Equity</a></li>
+                <li><a href="">College Achievement Plan</a></li>
+                <li><a href="">Alumni Community</a></li>
+                <li><a href="">U.S. Careers</a></li>
+                <li><a href="">International Careers</a></li>
               </ul>
             </div>
             <div class="footer__item">
               <h4>Social Impact <i class="fa-solid fa-chevron-up"></i></h4>
               <ul>
-                <li>People</li>
-                <li>Planet</li>
-                <li>Environmental and Social Impact Reporting</li>
+                <li><a href="">People</a></li>
+                <li><a href="">Planet</a></li>
+                <li>
+                  <a href="">Environmental and Social Impact Reporting</a>
+                </li>
               </ul>
             </div>
             <div class="footer__item">
@@ -560,24 +622,26 @@
                 For Business Partners <i class="fa-solid fa-chevron-up"></i>
               </h4>
               <ul>
-                <li>Landlord Support Center</li>
-                <li>Suppliers</li>
-                <li>Corporate Gift Card Sales</li>
-                <li>Office and Foodservice Coffee</li>
+                <li><a href="">Landlord Support Center</a></li>
+                <li><a href="">Suppliers</a></li>
+                <li><a href="">Corporate Gift Card Sales</a></li>
+                <li><a href="">Office and Foodservice Coffee</a></li>
               </ul>
             </div>
             <div class="footer__item">
               <h4>Order and Pick Up <i class="fa-solid fa-chevron-up"></i></h4>
               <ul>
-                <li>Order on the App</li>
-                <li>Order on the Web</li>
-                <li>Delivery</li>
-                <li>Order and Pick Up Options</li>
-                <li>Explore and Find Coffee for Home</li>
+                <li><a href="">Order on the App</a></li>
+                <li><a href="">Order on the Web</a></li>
+                <li><a href="">Delivery</a></li>
+                <li><a href="">Order and Pick Up Opti</a>ons</li>
+                <li><a href="">Explore and Find Coffee for Home</a></li>
               </ul>
             </div>
           </div>
-          <div class="footer__socials">
+          <div
+            class="footer__socials lg:border-t-2 lg:pt-12 lg:pb-8 lg:border-black/10"
+          >
             <ul class="flex gap-5">
               <li>
                 <span></span>

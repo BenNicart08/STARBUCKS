@@ -17,8 +17,10 @@ module.exports = {
       },
       backgroundImage: {
         bgRewards: "url('../img/bgRewards-mobile.webp')",
+        bgRewardslg: "url('../img/xl-hero-desktop_2021.png')",
+        borderImg: "url('../img/outlinjebg.webp')",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-border-image")],
 };
